@@ -192,8 +192,24 @@ children:
       img: asad
     - name: Asiya
       husband: Akram
+      children:
+      - name: Umair
+        img: umair-asiya
+      - name: Zubair
+        img: zubair-asiya
+      - name: Aahil
+        img: aahil-asiya
+      - name: Zain
+        img: zain-asiya
     - name: Sobia
       husband: Haseeb
+      children:
+      - name: Ahmad
+        img: ahmad-sobia
+      - name: Abdul Ahhad
+        img: abdul-ahhad-sobia
+      - name: Daughter
+        img: sobia-daughter
     - name: Nadiya
       husband: ''
     - name: Shaista

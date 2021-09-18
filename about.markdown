@@ -4,6 +4,8 @@ title: About
 permalink: /about/
 ---
 
+{% include analytics.html %}
+
 ### General.
 
 The Kambohs are also known as Kambos in the Punjab and Kambojas / Kambojs in Iran/ Persia. In U.P(United Province/Uttar Pradesh) they are called Zuberis. They populate nearly 1.5 million strong, among Muslims(Year 2011 A.D). They are also found among the Hindus, Sikhs and a few Jains in the south Indian sub-continent. 

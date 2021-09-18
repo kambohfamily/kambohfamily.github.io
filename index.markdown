@@ -4,5 +4,5 @@
 
 layout: home
 ---
-
+{% include analytics.html %}
 {% include graph.html %}
