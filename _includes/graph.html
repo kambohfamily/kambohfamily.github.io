@@ -1,0 +1,309 @@
+<style>
+  .page-content .wrapper { max-width: 100%!important; padding: 0!important;; }
+  .node circle { fill: #fff; stroke: steelblue; stroke-width: 3px; }
+  .node text { font: 12px sans-serif; }
+  .link { fill: none; stroke: #ccc; stroke-width: 2px; }
+  /* Profile */
+  .tooltip { visibility: hidden; position: absolute; }
+  img {
+    max-width: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+
+  .card {
+    background: #fff;
+    text-align: center;
+    margin: 30px auto;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px 1px #000;
+    width: 300px;
+    display: inline-block;
+  }
+  .card .header { position: relative; padding: 20px; }
+  .card .header .image { width: 100px; margin: 0 auto; }
+  .card .header .image img { border: 3px solid #1565C0; border-radius: 100%; }
+  .card .header .description { position: relative; }
+  .card .header .description h1 { font-weight: bold; font-size: 1.5em; letter-spacing: 0.1em; }
+  .card .header .description p { color: #455A64; line-height: 100%; }
+  .card .header .description .line { width: 100%; position: absolute; border: 1px solid #1565C0; margin-top: 5px; }
+  .card .header #social-line { position: relative; top: 10px; }
+  .card .header #social-line a { font-size: 1.5em; }
+  .card .header .btn-twitter { margin-top: 10px; }
+</style>
+
+<div style="display: block; width: auto; height: auto; position: relative;">
+  <div class="tooltip" >
+    <div class="card">
+       <div class="header">
+         <div class="image"><img id="picture" src=""></div>
+          <div class="description">
+            <h1 id="name"></h1>
+            <!-- <p>UI Front-End Developer</p>
+            <p>Web-Designer</p> -->
+            <div class="line"></div>
+          </div>
+          <div id="social-line">
+            <!-- <a href="https://www.behance.net/alextkachov" target="_blank" class=""></a>
+            <a href="https://codepen.io/alexpopovich/" target="_blank" class=""></a>
+            <a href="https://github.com/SimpleAlex" target="_blank" class=""></a> -->
+          </div>
+            <!-- <div class="btn btn-twitter"><a href="https://twitter.com/simply_aalex" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @simply_aalex</a> -->
+          </div>
+       </div>
+    </div>
+  <div id='d3container'></div>
+</div>
+
+
+<script src="assets/js/d3.min.js"></script>
+<script>
+
+/* Tree graph */
+window.addEventListener('load', (event) => {
+  const dataStr = '{{site.data.family}}'.replace(/=>/g, ':');
+  var data = JSON.parse(dataStr);
+  const dx = 100
+  const dy = 200
+  const width = 1200
+  const margin = ({top: 10, right: 120, bottom: 10, left: 40})
+  /* AUTH */
+  const passcode = String.fromCharCode(107, 97, 109, 98, 111, 104, 43, 49, 57, 57, 48)
+  // delete localStorage['kambohfamilykey']
+  let auth = localStorage['kambohfamilykey'] === passcode;
+  if (!auth) {
+    const authStr = prompt("Please Enter Password", '')
+    if (authStr === passcode) {
+      localStorage['kambohfamilykey'] = authStr
+    }
+  }
+
+  /* /AUTH */
+
+  let showImages = true;
+
+  const tree = d3.tree().nodeSize([dx, dy])
+  // const diagonal = d3.linkHorizontal().x(d => d.y).y(d => d.x)
+  const diagonal = d3.linkVertical().x(d => d.x).y(d => d.y)
+  const root = d3.hierarchy(data);
+  const zoom = d3.zoom().on('zoom', (e) => d3.select('svg g').attr('transform', e.transform));
+
+
+
+  root.x0 = width / 2;
+  root.y0 = 0;
+
+  root.descendants().forEach((d, i) => {
+    d.id = i;
+    d._children = d.children;
+    if (d.depth /* && d.data.name.length !== 7 */) d.children = null;
+  });
+
+  //define tooltip
+  // var tooltip = d3.select("body")
+  //   .append("div")
+  //   .attr("class", "tooltip");
+  var tooltip = d3.select(".tooltip")
+
+
+  // console.log(d3.select('.tooltip #social-line').html())
+
+
+  const svg = d3.select('#d3container').append("svg")
+      .attr("viewBox", [-margin.left, -margin.top, width, dx])
+      .attr('height', 700)
+      // .attr('preserveAspectRatio','xMinYMin meet')
+      .style('width', '100%')
+      .style("font", "10px sans-serif")
+      .style("user-select", "none")
+      .call(zoom)
+      ;
+
+  const graph = svg.append('g')
+          // .attr("transform", 'translate('+(width/2)+',-159.61843585968018) scale(1)')
+          // .attr("transform", 'translate('+(width/2)+','+root.y0+') scale(1)')
+  //     .call(d3.zoom().scaleExtent([0.5, 5]).on("zoom", function (event) { svg.attr("transform", event.transform)
+  //       }));
+
+
+  d3.select('svg')
+    .call(zoom);
+
+  const gLink = graph.append("g")
+      .attr("fill", "none")
+      .attr("stroke", "#555")
+      .attr("stroke-opacity", 0.4)
+      .attr("stroke-width", 1.5);
+
+  const gNode = graph.append("g")
+      .attr("cursor", "pointer")
+      .attr("pointer-events", "all");
+
+  function update(source) {
+    // const duration = d3.event && d3.event.altKey ? 2500 : 250;
+    const duration = 400;
+    const nodes = root.descendants().reverse();
+    const links = root.links();
+
+    // Compute the new tree layout.
+    tree(root);
+
+    let left = root;
+    let right = root;
+    root.eachBefore(node => {
+      if (node.x < left.x) left = node;
+      if (node.x > right.x) right = node;
+    });
+
+    // const height = right.x - left.x + margin.top + margin.bottom;
+
+    const transition = graph.transition()
+        .duration(duration)
+        // .attr("viewBox", [-margin.left, left.x - margin.top, width, height])
+        // .tween("resize", window.ResizeObserver ? null : () => () => svg.dispatch("toggle"));
+
+    // Update the nodes…
+    const node = gNode.selectAll("g")
+      .data(nodes, d => d.id);
+
+    // Enter any new nodes at the parent's previous position.
+    const nodeEnter = node.enter().append("g")
+        .attr("transform", d => `translate(${source.x0},${source.y0})`)
+        .attr("fill-opacity", 0)
+        .attr("stroke-opacity", 0)
+        .on("click", (event, d) => {
+          d.children = d.children ? null : d._children;
+          update(d);
+        });
+        if (!isTouchDevice()) {
+          nodeEnter
+          .on("mouseover", function(e, d) {
+            d3.select('.tooltip #name').html(getName(d))
+            d3.select('.tooltip #picture').attr('src', d3.select('#my_image'+ d.id +' image').attr('href'))
+            var list = d3.select('.tooltip #social-line'); list.html('')
+            if (d.data.info) {
+              list.html('')
+              for (var i = 0; i < d.data.info.length; i++) {
+                list.append('a')
+                  .attr('href', d.data.info[i].value)
+                  .attr('target', '_blank')
+                  .html(d.data.info[i].title)
+              }
+            }
+            // tooltip.html(d.data.name)
+            return tooltip.style("visibility", "visible");
+            })
+          .on("mousemove", function(event){return tooltip.style("top", (event.pageY-120)+"px").style("left",(event.pageX+20)+"px");})
+          .on("mouseout", function(){return tooltip.style("visibility", "hidden");});
+        }
+
+    //define defs and patterns - for the images
+    var defs = nodeEnter.append("defs");
+
+
+    defs.append('pattern')
+      .attr("id", d => "my_image" + d.id)
+      .attr("width", 1)
+      .attr("height", 1)
+      .append("svg:image")
+      .attr("xlink:href", d => {
+        let img = d.data.img
+        if (!img || !showImages) return 'assets/images/default-person.png';
+        if (img.indexOf('.') == -1) img = img + '.jpg'
+        return 'assets/images/' + img
+      })
+      .attr("height", "80")
+      .attr("width", "80")
+      .attr("x", 0)
+      .attr("y", 0);
+
+    nodeEnter.append("circle")
+        .attr("r", 40)
+        .attr("fill", d => "url(#my_image" + d.id + ")"/* d._children ? "#555" : "#ccc" */)
+        .attr("stroke", 'blue')
+        .attr("stroke-width", 0.5)
+      
+
+    nodeEnter.append("text")
+        .attr("dx", "0.31em")
+        .attr("y", d => d._children ? -50 : 50)
+        .attr("text-anchor", d => d._children ? "end" : "start")
+        .text(getName)
+        // .text(d => {
+        //   if (auth || d.data.husband === undefined) return d.data.name
+        //   return 'Daughter'
+        //   // const data = d.data;
+        //   // return auth    ? data.name :
+        //   //   data.husband ? 'Mrs. ' + data.husband : 'Daughter'
+        // })
+      // .clone(true).lower()
+      //   .attr("stroke-linejoin", "round")
+      //   .attr("stroke-width", 3)
+      //   .attr("stroke", "white");
+
+    // Transition nodes to their new position.
+    const nodeUpdate = node.merge(nodeEnter).transition(transition)
+        .attr("transform", d => `translate(${d.x},${d.y})`)
+        .attr("fill-opacity", 1)
+        .attr("stroke-opacity", 1);
+
+    // Transition exiting nodes to the parent's new position.
+    const nodeExit = node.exit().transition(transition).remove()
+        .attr("transform", d => `translate(${source.x},${source.y})`)
+        .attr("fill-opacity", 0)
+        .attr("stroke-opacity", 0);
+
+    // Update the links…
+    const link = gLink.selectAll("path")
+      .data(links, d => d.target.id);
+
+    // Enter any new links at the parent's previous position.
+    const linkEnter = link.enter().append("path")
+        .attr("d", d => {
+          const o = {x: source.x0, y: source.y0};
+          return diagonal({source: o, target: o});
+        });
+
+    // Transition links to their new position.
+    link.merge(linkEnter).transition(transition)
+        .attr("d", diagonal);
+
+    // Transition exiting nodes to the parent's new position.
+    link.exit().transition(transition).remove()
+        .attr("d", d => {
+          const o = {x: source.x, y: source.y};
+          return diagonal({source: o, target: o});
+        });
+
+    // Stash the old positions for transition.
+    root.eachBefore(d => {
+      d.x0 = d.x;
+      d.y0 = d.y;
+    });
+  }
+  update(root);
+
+  // document.getElementsByTagName('body')[0].appendChild(svg.node())
+
+  function newChild() { alert('newChild') }
+  function newSibling() { alert('newSibling') }
+  function showPictures() { showImages = !showImages; update(root) }
+
+
+  function isTouchDevice() {
+    return (('ontouchstart' in window) ||
+      (navigator.maxTouchPoints > 0) ||
+      (navigator.msMaxTouchPoints > 0));
+  }
+
+  function getName(d) {
+    if (auth || d.data.husband === undefined) return d.data.name
+    if (!d.data.husband.length) return 'Daughter'
+    return 'Mrs. ' + d.data.husband
+  }
+});
+
+</script>
