@@ -16,6 +16,15 @@ __familes:
     - name: Neeha
     - name: Irha
     - name: Gurdiya (nic)
+  - &imran-sumera
+    - name: Yusrah
+      husband: ''
+    - name: Samran
+    - name: Ifrah
+    - name: Abdul Rehman
+    - name: Romaan
+    - name: Anmol
+      husband: ''
 
 name: Parent
 children:
@@ -113,15 +122,7 @@ children:
       - name: Uzair
     - name: Imran
       wife: Sumerah
-      children:
-      - name: Yusrah
-        husband: ''
-      - name: Samran
-      - name: Ifrah
-      - name: Abdul Rehman
-      - name: Romaan
-      - name: Anmol
-        husband: ''
+      children: *imran-sumera
 - name: Master Habib
   children:
   - name: Abdul Sattar Aber
@@ -216,15 +217,14 @@ children:
       husband: ''
   - name: Gulzar Kashir
     img: gulzar-habib
-    wife:
-    - ''
+    wife: ''
     children:
     - name: Iftikhar
       img: iftikhar
-      wife:
-      - ''
+      wife: ''
       children:
       - name: Fatima
+        img: fatima-iftakhar
       - name: Hania
     - name: Naeem
       img: naeem-gulzar
@@ -270,10 +270,12 @@ children:
     - name: Nadia
       husband: Ismail
       children:
-      - name: 'Ehsan ul Allah '
-      - name: 'Inamullah '
+      - name: Ehsan ul Allah
+        img: ehsanulallah-nadia
+      - name: Inamullah
       - name: Ayesha
-      - name: Muhammad ayan
+        img: ayesha-nadiya
+      - name: Muhammad Ayan
       - name: Fatima
     - name: Sadiya
       husband: ''
@@ -506,7 +508,7 @@ children:
       - name: Mobeen
       - name: Haram
     - name: Yasmeen
-      husband: Naveed
+      husband: Asghar Ali
       children:
       - name: Zahra
       - name: Mariyam
@@ -528,7 +530,8 @@ children:
       img: usman-ramzan
       wife: Rashidah
     - name: Somerah
-      husband: ''
+      husband: 'Imran'
+      children: *imran-sumera
     - name: Tehminah
       husband: ''
 - name: Master Ramzan
