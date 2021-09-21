@@ -75,7 +75,7 @@ window.addEventListener('load', (event) => {
   // delete localStorage['kambohfamilykey']
   let auth = localStorage['kambohfamilykey'] === passcode;
   if (!auth) {
-    const authStr = prompt("Please Enter Password", '')
+    const authStr = prompt("Please Enter Password, or just cancel", '')
     if (authStr === passcode) {
       localStorage['kambohfamilykey'] = authStr
     }

@@ -413,6 +413,7 @@ children:
         wife: Aqsa
         children:
         - name: Mussa
+          img: mossa-farooq
       - name: Salman
         img: salman-islam
       - name: Rizwan
@@ -512,6 +513,7 @@ children:
       children:
       - name: Zahra
       - name: Mariyam
+        img: mariam-yasmeen
   - name: Rasheedan
     husband: Ramzan
     children:
