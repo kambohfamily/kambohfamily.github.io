@@ -373,7 +373,7 @@ children:
         husband: ''
       - name: Asma
         husband: ''
-    - name: Zaddi
+    - name: Zahida
       husband: Fakeeriya
       children:
       - name: Loqmaan (Late)
@@ -511,6 +511,8 @@ children:
     - name: Yasmeen
       husband: Asghar Ali
       children:
+      - name: Haider Ali
+        img: haider-yasmeen
       - name: Zahra
       - name: Mariyam
         img: mariam-yasmeen
