@@ -189,6 +189,9 @@ children:
     - name: Ashraf
       img: ashraf
       wife: ''
+      children:
+        - name: Ashar Mehmood
+          image: ashar-mehmood
     - name: Asad
       img: asad
     - name: Asiya
@@ -205,7 +208,7 @@ children:
     - name: Sobia
       husband: Haseeb
       children:
-      - name: Ahmad
+      - name: Ahmad (Late)
         img: ahmad-sobia
       - name: Abdul Ahhad
         img: abdul-ahhad-sobia
