@@ -191,7 +191,7 @@ children:
       wife: ''
       children:
         - name: Ashar Mehmood
-          image: ashar-mehmood
+          img: ashar-mehmood
     - name: Asad
       img: asad
     - name: Asiya
