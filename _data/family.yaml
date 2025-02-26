@@ -488,17 +488,17 @@ children:
       wife: Asma
       children:
       - name: Bilal
-        img: bilal-imran
+        img: bilal-imran-gulzaran-habib
         info:
         - title: Birthday
           value: ''
       - name: Muhammad
-        img: muhammad-bin-imran
+        img: muhammad-imran-gulzaran-habib
         info:
         - title: Birthday
           value: ''
       - name: Shazain
-        img: shahzain-imran-ramzan
+        img: shahzain-imran-gulzaran-habib
     - name: Irfan (Late)
     - name: Nauman
       img: nauman-ramzan
