@@ -583,8 +583,10 @@ children:
   - name: Iqbal
     children:
     - name: Anjam
+      img: anjam-iqbal-ramzan
     - name: Azam
     - name: Asim
+      img: asim-iqbal-ramzan
     - name: Najma
       husband: Hafeez
     - name: Aasma
@@ -597,12 +599,14 @@ children:
       img: zubair-bilal-ramzan
       wife: Saba
       children:
-      - name: Uzair
+      - name: Auzair
+        img: auzair-zubair-bilal-ramzan
     - name: Nasir
       img: nasir-bilal-ramzan
       wife: Shakeela
       children:
       - name: Muhammad
+        img: muhammad-nasir-bilal-ramzan
       - name: Burhan
     - name: Nabeela
       husband: Shahbaz
