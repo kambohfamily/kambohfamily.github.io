@@ -9,13 +9,19 @@ __familes:
     - name: Fizza
       husband: ''
   - &navees-saeed
-    - name: new Born Son
+    - name: Son 1
       img: new-born
   - &naveed-aliahmad
-    - name: Abeha
     - name: Neeha
+      husband: ''
+    - name: Abeeha
+      husband: ''
+    - name: Zoha
+      husband: ''
     - name: Irha
-    - name: Gurdiya (nic)
+      husband: ''
+    - name: Saddique
+    - name: Umar
   - &imran-sumera
     - name: Yusrah
       husband: ''
