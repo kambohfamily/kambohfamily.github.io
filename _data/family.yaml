@@ -368,11 +368,11 @@ children:
         wife: Sidra
         children:
         - name: Anas
-          img: anas-nadeem
+          img: anas-nadeem-ali-ahmad
         - name: Huzaifa
-          img: huzaifa-nadeem
+          img: huzaifa-nadeem-ali-ahmad
         - name: Ahmar
-          img: ahmar-nadeem
+          img: ahmar-nadeem-ali-ahmad
       - name: Naheed
         husband: 'Mushtaq'
         children:
@@ -432,6 +432,8 @@ children:
         children:
         - name: Mussa
           img: mossa-farooq
+        - name: Musfirah
+          husband: ''
       - name: Salman
         img: salman-islam
       - name: Rizwan
@@ -475,6 +477,8 @@ children:
         info:
         - title: Birthday
           value: ''
+      - name: Shazain
+        img: shahzain-imran-ramzan
     - name: Nauman
       img: nauman-ramzan
       wife: Anbrin
@@ -484,6 +488,8 @@ children:
         info:
         - title: Birthday
           value: 22-08-2020
+      - name: Arham
+        img: arham-nauman-ramzan
     - name: Shameem
       husband: Khalil Ahmad
       children:
@@ -535,6 +541,7 @@ children:
         img: zahra-yasmeen
       - name: Mariyam
         img: mariam-yasmeen
+      - name: Daughter 3
   - name: Rasheedan
     husband: Ramzan
     children:
