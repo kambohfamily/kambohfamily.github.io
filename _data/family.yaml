@@ -590,13 +590,16 @@ children:
     - name: Aasma
       husband: Asghar
   - name: Bilal
+    img: bilal-ramzan
     wife: Shakeela
     children:
     - name: Zubair
+      img: zubair-bilal-ramzan
       wife: Saba
       children:
       - name: Uzair
     - name: Nasir
+      img: nasir-bilal-ramzan
       wife: Shakeela
       children:
       - name: Muhammad
