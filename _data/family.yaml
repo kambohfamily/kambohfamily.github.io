@@ -364,6 +364,7 @@ children:
         img: naveed
         children: *naveed-aliahmad
       - name: Nadeem
+        img: nadeem-ali-ahmad
         wife: Sidra
         children:
         - name: Anas
