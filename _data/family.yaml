@@ -40,8 +40,8 @@ __familes:
       husband: ''
     - name: Samran
     - name: Ifrah
+    - name: Romaan Adan
     - name: Abdul Rehman
-    - name: Romaan
     - name: Anmol
       husband: ''
 
@@ -572,14 +572,31 @@ children:
       info:
       - title: Facebook
         value: https://www.facebook.com/tanveer.babar.336
+      - name: Mehrab
+        husband: Waqas
+        children:
+        - name: Maaz Ahmad
+      - name: Subhan
+      - name: Samavia
+      - name: Momina
     - name: Usman
       img: usman-ramzan
       wife: Rashidah
+      children:
+      - name: Ahsan
+      - name: Arham
+      - name: Ayan
+      - name: Abdullah
     - name: Somerah
-      husband: 'Imran'
+      husband: Imran
       children: *imran-sumera
     - name: Tehminah
-      husband: ''
+      husband: Khalid
+      children:
+      - name: Abiha
+      - name: Zanisha
+      - name: Mirha
+      - name: Irha
 - name: Master Ramzan
   children:
   - name: Iqbal
