@@ -215,8 +215,11 @@ children:
         img: ahmad-sobia
       - name: Abdul Ahhad
         img: abdul-ahhad-sobia
-      - name: Daughter
+      - name: Alisha
+        husband: ''
         img: sobia-daughter
+      - name: Ifra
+        husband: ''
     - name: Nadiya
       husband: ''
     - name: Shaista
@@ -361,24 +364,32 @@ children:
         img: naveed
         children: *naveed-aliahmad
       - name: Nadeem
+        wife: Sidra
         children:
-        - name: Son 1
-        - name: Son 2
-        - name: Son 3
+        - name: Anas
+          img: anas-nadeem
+        - name: Huzaifa
+          img: huzaifa-nadeem
+        - name: Ahmar
+          img: ahmar-nadeem
       - name: Naheed
-        husband: ''
+        husband: 'Mushtaq'
         children:
-        - name: Sami ul Allah
         - name: Abdullah
-        - name: Son ???
-      - name: Kawal
-        husband: ''
-        children:
-        - name: Son 1
+        - name: Sami ul Allah
+        - name: Minahil
+          husband: ''
+        - name: Mariyam
+          husband: ''
       - name: Aysha
-        husband: ''
+        husband: 'Nadeem'
+      - name: Kanval
+        husband: 'Aleem'
+        children:
+        - name: Azeem
+        - name: Mubeeb
       - name: Asma
-        husband: ''
+        husband: 'Nasir'
     - name: Zahida
       husband: Fakeeriya
       children:
