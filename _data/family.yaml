@@ -22,6 +22,19 @@ __familes:
       husband: ''
     - name: Saddique
     - name: Umar
+  - &irfan-shahnaz
+    - name: Rehan
+      img: rehan-irfan
+    - name: Muhammad
+      img: muhammad-bin-irfan
+    - name: Hirra
+      husband: Abdullah
+    - name: Issha
+      husband: ''
+    - name: Mobeen
+      husband: ''
+    - name: Haram
+      husband: ''
   - &imran-sumera
     - name: Yusrah
       husband: ''
@@ -129,6 +142,9 @@ children:
     - name: Imran
       wife: Sumerah
       children: *imran-sumera
+    - name: Irfan
+      wife: Shahnaz
+      children: *irfan-shahnaz
 - name: Master Habib
   children:
   - name: Abdul Sattar Aber
@@ -529,15 +545,7 @@ children:
         img: talha-naveed
     - name: Shahnaz
       husband: Irfan
-      children:
-      - name: Rehan
-        img: rehan-irfan
-      - name: Muhammad
-        img: muhammad-bin-irfan
-      - name: Hirra
-      - name: Issha
-      - name: Mobeen
-      - name: Haram
+      children: *irfan-shahnaz
     - name: Yasmeen
       husband: Asghar Ali
       children:
