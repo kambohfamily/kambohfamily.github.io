@@ -572,29 +572,70 @@ children:
       husband: ''
 - name: Master Ramzan
   children:
-  - name: Iqbal|Asghar
+  - name: Iqbal
     children:
     - name: Anjam
     - name: Azam
     - name: Asim
     - name: Najma
-      husband: ''
+      husband: Hafeez
     - name: Aasma
-      husband: ''
+      husband: Asghar
   - name: Bilal
+    wife: Shakeela
     children:
     - name: Zubair
+      wife: Saba
+      children:
+      - name: Uzair
     - name: Nasir
+      wife: Shakeela
+      children:
+      - name: Muhammad
+      - name: Burhan
     - name: Nabeela
-      husband: ''
+      husband: Shahbaz
+      children:
+      - name: Kiran
+      - name: Hassan
+      - name: Kinza
+      - name: Abdul Hadi
+      - name: Hareem Fatima
     - name: Shabeela
-      husband: ''
+      husband: Dildar
+      children:
+      - name: Noor
+      - name: Adbullah
+      - name: Aysha
+      - name: Subhan
+      - name: Haram
     - name: Rabia
-      husband: ''
+      husband: Imran
+      children:
+      - name: Anaya
+      - name: Ahmad
+      - name: Hijab
+      - name: Dua
     - name: Sanna
-      husband: ''
+      husband: Arfan
+      children:
+      - name: Humna
+      - name: Minahil
+      - name: Abdul Hadi
   - name: Saadi
-  - name: Saani|Sanna
+    husband: Bashir
+    children:
+    - name: Ikram
+    - name: Zafar
+    - name: Shahnaz
+    - name: Javeed (Late)
+    - name: Usman
+    - name: Shahbaz
+    - name: Shahid
+    - name: Muneeba ( Adopted )
+    - name: Naheed
+  - name: Saani/Sanna
+    husband: Jameel
     children:
     - name: Humerah
       husband: ''
@@ -609,6 +650,15 @@ children:
     - name: Arshiya
       husband: ''
   - name: Saamo
-    husband: ''
+    husband: Rasheed
   - name: Rukhsar
-    husband: ''
+    husband: Irfan
+    children:
+    - name: Sadaf
+      husband: Shahid
+      children:
+      - name: Shiyan
+      - name: Ayaan
+    - name: Hammad
+    - name: Farhan
+    - name: Mahak
