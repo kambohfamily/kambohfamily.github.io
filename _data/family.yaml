@@ -172,7 +172,7 @@ children:
       - name: Sajid
       - name: Saif
       - name: Sadia
-        husband: ''
+        husband: Abdullah
     - name: Safiya
       husband: Abdual Jaleel
       children:
@@ -183,8 +183,10 @@ children:
         - name: Abdul Wahid
         - name: Fajar
       - name: Abdullah
+        img: abdullah-safia-sattar-habib
+        wife: Sadia
       - name: Farah
-        husband: 'Naveed'
+        husband: Naveed
         children:
         - name: Hashim
         - name: Mahnoor
