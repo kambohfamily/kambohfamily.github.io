@@ -383,14 +383,14 @@ children:
         - name: Mariyam
           husband: ''
       - name: Aysha
-        husband: 'Nadeem'
+        husband: Nadeem
       - name: Kanval
-        husband: 'Aleem'
+        husband: Aleem
         children:
         - name: Azeem
-        - name: Mubeeb
+        - name: Muneeb
       - name: Asma
-        husband: 'Nasir'
+        husband: Nasir
     - name: Zahida
       husband: Fakeeriya
       children:
