@@ -483,10 +483,6 @@ children:
       - title: Facebook
         value: https://www.facebook.com/akram.mandial
       children: *ikram-ramzan
-    - name: Irfan (Late)
-      info:
-      - title: Died
-        value: "------"
     - name: Imran
       img: imran-ramzan
       wife: Asma
@@ -503,6 +499,7 @@ children:
           value: ''
       - name: Shazain
         img: shahzain-imran-ramzan
+    - name: Irfan (Late)
     - name: Nauman
       img: nauman-ramzan
       wife: Anbrin
