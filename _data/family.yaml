@@ -380,7 +380,7 @@ children:
         - name: Ahmar
           img: ahmar-nadeem-ali-ahmad
       - name: Naheed
-        husband: 'Mushtaq'
+        husband: Mushtaq
         children:
         - name: Abdullah
         - name: Sami ul Allah
@@ -553,7 +553,7 @@ children:
     children:
     - name: Tanveer
       img: tanveer
-      wife: ''
+      wife: Tanzeela
       children:
       - name: Mehran Babar
         info:
