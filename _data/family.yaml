@@ -453,7 +453,7 @@ children:
           img: issa-aqsa-zahida
       - name: Aliya
         husband: Adnan
-      - name: Rakeeza
+      - name: Raqeeza
         husband: Shakeel
         children:
         - name: Asad
@@ -462,17 +462,22 @@ children:
           img: ibaad-raqeeza-zahida
         - name: Muneeb
           img: muneeb-raqeeza-zahida
-        - name: Suleman
-          img: suleman-raqeeza-zahida
+        - name: Sulaiman
+          img: sulaiman-raqeeza-zahida
       - name: Roqaiya
         husband: Shafeeq
         children:
         - name: Romaan
-        - name: Faizaan
-        - name: Arshmaan
+          img: romaan-roqaiya-zahida
+        - name: Faizan
+          img: faizan-roqaiya-zahida
+        - name: Arshman
+          img: arshman-roqaiya-zahida
         - name: Inshara
+          img: inshara-roqaiya-zahida
           husband: ''
         - name: Izaan
+          img: izaan-roqaiya-zahida
   - name: Gulzaran
     husband:
     - Ramzan
