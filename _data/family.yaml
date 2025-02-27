@@ -447,8 +447,11 @@ children:
       children:
       - name: Usman
         img: usman-islam
+        wife: Amarah
         children:
         - name: Minahil
+          img: minahil-usman-islam
+          husband: ''
         - name: Abdul Hanan
       - name: Umar Farooq
         img: farooq-islam
@@ -470,7 +473,7 @@ children:
       - name: Irfan
         img: irfan-islam
       - name: Farhan
-        img: farhan-islam
+        img: farhan-islam-ramzan
       - name: Rifat
         husband: Tariq
         children:
@@ -529,7 +532,7 @@ children:
       husband: Akhtar
       children:
       - name: Azar
-        img: azar-akhtar
+        img: azar-parveen-ramzan-habib
       - name: Meerab
       - name: Wahejha
       - name: Asad
