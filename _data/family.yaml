@@ -653,12 +653,16 @@ children:
     - name: Ikram
     - name: Zafar
     - name: Shahnaz
+      husband: ''
     - name: Javeed (Late)
     - name: Usman
     - name: Shahbaz
     - name: Shahid
-    - name: Muneeba ( Adopted )
+      img: shahdi-saadi-ramzan
+    - name: Muneeba (Ad)
+      husband: ''
     - name: Naheed
+      husband: ''
   - name: Saani/Sanna
     husband: Jameel
     children:
