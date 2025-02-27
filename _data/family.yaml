@@ -426,8 +426,12 @@ children:
         children:
         - name: Zimal Rani
           husband: ''
+          img: zimal-afnan-zahida
         - name: Ayzal
-      - name: Hamad
+          img: ayzal-afnan-zahida
+          husband: ''
+      - name: Hamid Rehman
+        img: hamid-rehman-zahida
       - name: Anam
         husband: Zulfiqar
         children:
