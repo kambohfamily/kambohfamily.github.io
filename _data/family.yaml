@@ -421,7 +421,7 @@ children:
       children:
       - name: Loqmaan (Late)
       - name: Afnan
-        img: afnan-zadi
+        img: afnan-zahida
         wife: Zunerah
         children:
         - name: Zimal Rani
@@ -436,7 +436,9 @@ children:
         husband: Zulfiqar
         children:
         - name: Muhammad
+          img: muhammad-anam-zahida
         - name: Ayat
+          img: ayat-anam-zahida
           husband: ''
       - name: Ateqa
         husband: Navees
@@ -446,16 +448,22 @@ children:
         children:
         - name: Nadiya
           husband: ''
+          img: nadiya-aqsa-zahida
         - name: Issa
+          img: issa-aqsa-zahida
       - name: Aliya
         husband: Adnan
-      - name: Raqeza
+      - name: Rakeeza
         husband: Shakeel
         children:
         - name: Asad
+          img: asad-raqeeza-zahida
         - name: Ibaad
+          img: ibaad-raqeeza-zahida
         - name: Muneeb
+          img: muneeb-raqeeza-zahida
         - name: Suleman
+          img: suleman-raqeeza-zahida
       - name: Roqaiya
         husband: Shafeeq
         children:
