@@ -8,9 +8,6 @@ __familes:
       img: raheel-ikram
     - name: Fizza
       husband: ''
-  - &navees-saeed
-    - name: Son 1
-      img: new-born
   - &naveed-aliahmad
     - name: Neeha
       husband: ''
@@ -44,6 +41,9 @@ __familes:
     - name: Abdul Rehman
     - name: Anmol
       husband: ''
+  - &ateeqa-navees-saeed
+    - name: Hunzala
+    - name: Rohaan
 
 name: Parent
 children:
@@ -347,7 +347,7 @@ children:
       children:
       - name: Navees
         img: navees-ahmad
-        children: *navees-saeed
+        children: *ateeqa-navees-saeed
       - name: Naeem Ahmad
         img: naeem-saeed
         info:
@@ -422,22 +422,45 @@ children:
       - name: Loqmaan (Late)
       - name: Afnan
         img: afnan-zadi
+        wife: Zunerah
+        children:
+        - name: Zimal Rani
+          husband: ''
+        - name: Ayzal
       - name: Hamad
       - name: Anam
-        husband: ''
+        husband: Zulfiqar
+        children:
+        - name: Muhammad
+        - name: Ayat
+          husband: ''
       - name: Ateqa
         husband: Navees
-        children: *navees-saeed
+        children: *ateeqa-navees-saeed
       - name: Aqsa
-        husband: ''
+        husband: Abdul Wahid
         children:
-        - name: Daughter 1
+        - name: Nadiya
+          husband: ''
+        - name: Issa
       - name: Aliya
-        husband: ''
+        husband: Adnan
       - name: Raqeza
-        husband: ''
+        husband: Shakeel
+        children:
+        - name: Asad
+        - name: Ibaad
+        - name: Muneeb
+        - name: Suleman
       - name: Roqaiya
-        husband: ''
+        husband: Shafeeq
+        children:
+        - name: Romaan
+        - name: Faizaan
+        - name: Arshmaan
+        - name: Inshara
+          husband: ''
+        - name: Izaan
   - name: Gulzaran
     husband:
     - Ramzan
