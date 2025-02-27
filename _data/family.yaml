@@ -3,7 +3,7 @@
 __familes:
   - &ikram-ramzan
     - name: Adeel
-      img: adeel-ikram
+      img: adeel-ikram-ramzan
     - name: Raheel
       img: raheel-ikram
     - name: Fizza
