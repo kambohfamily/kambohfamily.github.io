@@ -43,7 +43,9 @@ __familes:
       husband: ''
   - &ateeqa-navees-saeed
     - name: Hunzala
+      img1: hunzala-navees-saeed
     - name: Rohaan
+      img1: rohaan-navees-saeed
 
 name: Parent
 children:
