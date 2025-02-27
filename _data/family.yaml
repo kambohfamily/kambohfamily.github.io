@@ -563,11 +563,13 @@ children:
       wife: Tanzeela
       children:
       - name: Mehran Babar
+        img: mehran-tanveer-rasheedan-habib
       - name: Mehrab
         husband: Waqas
         children:
         - name: Maaz Ahmad
       - name: Subhan
+        img: subhan-tanveer-rasheedan-habib
       - name: Samavia
       - name: Momina
     - name: Usman
