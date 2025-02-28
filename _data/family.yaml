@@ -654,6 +654,11 @@ children:
         img: muhammad-anjam-iqbal-ramzan
       - name: Hira
     - name: Azam
+      children:
+      - name: Muaaz
+        img: muaaz-azam-iqbal-ramzan
+      - name: Saad
+        img: saad-azam-iqbal-ramzan
     - name: Asim
       img: asim-iqbal-ramzan
       children:
