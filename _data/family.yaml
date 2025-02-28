@@ -638,14 +638,28 @@ children:
       - name: Mirha
       - name: Irha
 - name: Master Ramzan
+  img: master-ramzan
   children:
   - name: Iqbal
+    img: iqbal-ramzan
     children:
     - name: Anjam
       img: anjam-iqbal-ramzan
+      children:
+      - name: Asad
+        img: asad-anjam-iqbal-ramzan
+      - name: Abdullah
+        img: abdullah-anjam-iqbal-ramzan
+      - name: Muhammad
+        img: muhammad-anjam-iqbal-ramzan
+      - name: Hira
     - name: Azam
     - name: Asim
       img: asim-iqbal-ramzan
+      children:
+      - name: Moosa
+        img: moosa-asim-iqbal-ramzan
+      - name: Eisa
     - name: Najma
       husband: Hafeez
     - name: Aasma
