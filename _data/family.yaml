@@ -335,17 +335,19 @@ children:
     - name: Waqar
       img1: waqar-rasheed
       children:
-      - name: Unknown
-        img1: waqar-son
+      - name: Salayh
+        img: waqar-son
     - name: Haroon
-      img1: haroon-rasheed
+      img: haroon-rasheed
       info:
       - title: Facebook
         value: https://www.facebook.com/Islamic.Shariah
     - name: Fahad
-      img1: fahad-rasheed
+      img: fahad-rasheed
+      children:
+      - name: Yahiyah
     - name: Osama
-      img1: osama-rasheed
+      img: osama-rasheed
     - name: Asma
       husband: ''
   - name: Sttaran
