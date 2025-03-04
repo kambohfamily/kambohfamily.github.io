@@ -47,7 +47,7 @@ __familes:
     - name: Rohaan
       img1: rohaan-navees-saeed
 
-name: Parent
+name: Ahmad Hassan
 children:
 - name: Allah Daad
   children:
@@ -147,7 +147,7 @@ children:
     - name: Irfan
       wife: Shahnaz
       children: *irfan-shahnaz
-- name: Master Habib
+- name: Master Habibullah
   children:
   - name: Abdul Sattar Aber
     img: abdul-sattar
@@ -637,7 +637,7 @@ children:
       - name: Zanisha
       - name: Mirha
       - name: Irha
-- name: Master Ramzan
+- name: Master Muhammad Ramzan
   img: master-ramzan
   children:
   - name: Iqbal
