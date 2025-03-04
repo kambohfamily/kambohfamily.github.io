@@ -333,7 +333,7 @@ children:
     wife: ''
     children:
     - name: Waqar
-      img1: waqar-rasheed
+      img: waqar-rasheed
       children:
       - name: Salayh
         img: waqar-son
