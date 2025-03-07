@@ -176,12 +176,19 @@ children:
       husband: Ilyas
       children:
       - name: Rashid
+        children:
+        - name: Insha
+          husband: ''
       - name: Rashida
         husband: ''
         children:
         - name: Hoorab
-      - name: Zahida
+      - name: Shahida
         husband: ''
+        children:
+        - name: Ayaan
+        - name: Aleeha
+          husband: ''
       - name: Sajid
       - name: Saif
       - name: Sadia
@@ -211,9 +218,14 @@ children:
         husband: ''
         children:
         - name: Romaisa
-        - name: Afnan
-      - name: Mufarrah
+        - name: Afaan
+        - name: Usman
+      - name: Muffarah
         husband: ''
+        children:
+        - name: Saim
+        - name: Hashir
+        - name: Ibraheem
     - name: Fouzia
       husband: Ikram
       children: *ikram-ramzan
