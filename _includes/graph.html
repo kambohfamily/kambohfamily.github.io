@@ -90,14 +90,14 @@ window.addEventListener('load', (event) => {
   // const diagonal = d3.linkHorizontal().x(d => d.y).y(d => d.x)
   const diagonal = d3.linkVertical().x(d => d.x).y(d => d.y)
   const root = d3.hierarchy(data);
-  const zoom = d3.zoom().on('zoom', (e) => d3.select('svg g').attr('transform', e.transform));
+  const zoom = d3.zoom().on('zoom', (e) => d3.select('svg g').attr('transform', `translate(${width / 2}, -100) ${e.transform}`));
 
 
 
   root.x0 = width / 2;
   root.y0 = 0;
 
-  root.descendants().forEach((d, i) => {
+  root.descendants().slice(5).forEach((d, i) => {
     d.id = i;
     d._children = d.children;
     if (d.depth /* && d.data.name.length !== 7 */) d.children = null;
@@ -124,6 +124,7 @@ window.addEventListener('load', (event) => {
       ;
 
   const graph = svg.append('g')
+  .attr("transform", `translate(${width / 2}, -100)`)
           // .attr("transform", 'translate('+(width/2)+',-159.61843585968018) scale(1)')
           // .attr("transform", 'translate('+(width/2)+','+root.y0+') scale(1)')
   //     .call(d3.zoom().scaleExtent([0.5, 5]).on("zoom", function (event) { svg.attr("transform", event.transform)
