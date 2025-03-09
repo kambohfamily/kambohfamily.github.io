@@ -100,7 +100,7 @@ window.addEventListener('load', (event) => {
   root.descendants().forEach((d, i) => {
     d.id = i;
 
-    if (d.depth > 4) {
+    if (d.depth > 3) {
       d._children = d.children;
       d.children = null;
     }
