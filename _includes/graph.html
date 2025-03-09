@@ -97,10 +97,12 @@ window.addEventListener('load', (event) => {
   root.x0 = width / 2;
   root.y0 = 0;
 
-  root.descendants().slice(5).forEach((d, i) => {
+  root.descendants().forEach((d, i) => {
     d.id = i;
-    d._children = d.children;
-    if (d.depth /* && d.data.name.length !== 7 */) d.children = null;
+    if (d.depth > 10) {
+      d._children = d.children;
+      d.children = null;
+    }
   });
 
   //define tooltip
