@@ -99,8 +99,8 @@ window.addEventListener('load', (event) => {
 
   root.descendants().slice(5).forEach((d, i) => {
     d.id = i;
+    d._children = d.children;
     if (d.depth > 3) {
-      d._children = d.children;
       d.children = null;
     }
   });
