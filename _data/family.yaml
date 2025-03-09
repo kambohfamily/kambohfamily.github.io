@@ -269,6 +269,8 @@ children:
               img: aahil-asiya
             - name: Zain
               img: zain-asiya
+            - name: Ayaan
+            - name: Shayaan
           - name: Sobia
             husband: Haseeb
             children:
@@ -282,7 +284,9 @@ children:
             - name: Ifra
               husband: ''
           - name: Nadiya
-            husband: ''
+            husband: Aqib
+            children:
+            - name: Roshaan
           - name: Shaista
             husband: ''
         - name: Gulzar Kashir
