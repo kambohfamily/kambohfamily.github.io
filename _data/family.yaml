@@ -545,6 +545,8 @@ children:
               - name: Musfirah
                 img: musfirah-farooq-islam
                 husband: ''
+              - name: Ayzal
+                husband: ''
             - name: Salman
               img: salman-islam
             - name: Rizwan
@@ -641,7 +643,8 @@ children:
               img: zahra-yasmeen
             - name: Mariyam
               img: mariam-yasmeen
-            - name: Daughter 3
+            - name: Rida Fatima
+              img: ridda-fatima-yasmin
         - name: Rasheedan
           husband: Ramzan
           children:
